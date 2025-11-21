@@ -42,8 +42,8 @@ This tool automates header injection testing, supports custom payloads, and gene
 # 📦 Installation
 
 -- git clone https://github.com/<your-username>CRLF_Base64-Injection.git
---  cd CRLF_Base64-Injection
--- pip3 install -r requirements.txt
+|  cd CRLF_Base64-Injection
+| pip3 install -r requirements.txt
 
 
 🛠 Usage
