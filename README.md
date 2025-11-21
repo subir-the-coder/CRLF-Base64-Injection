@@ -1,4 +1,4 @@
-🚀 CRLF & Base64 Injection Scanner v2.0
+# 🚀 CRLF & Base64 Injection Scanner v2.0
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/922f5236-438c-400b-a99e-c005919e1b1c" />
 
