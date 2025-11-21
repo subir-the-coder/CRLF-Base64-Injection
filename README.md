@@ -1,5 +1,15 @@
 🚀 CRLF & Base64 Injection Scanner v2.0
 
+# CRLF & Base64 Injection Scanner v2.0
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Version](https://img.shields.io/badge/Release-v2.0-orange)
+![Security](https://img.shields.io/badge/Security-Research%20Tool-red)
+
+
+
 Advanced asynchronous CRLF + Base64 Injection Scanner built with aiohttp, designed for security researchers and penetration testers.
 
 This tool automates header injection testing, supports custom payloads, and generates detailed TXT + JSON reports for every target.
