@@ -1,3 +1,4 @@
-%0D%0ASet-Cookie: attacker=1
-%0D%0AContent-Security-Policy: unsafe-inline
-%0D%0Aheader: value
+%0d%0aX-Injected: injected
+%0d%0aSet-Cookie: hijacked
+%0d%0aX-Forwarded-For: evil
+%0d%0aContent-Length: 0
