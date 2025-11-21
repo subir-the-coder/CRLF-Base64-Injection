@@ -1,5 +1,8 @@
 🚀 CRLF & Base64 Injection Scanner v2.0
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/de5176f3-b098-433d-b552-13ddb3772bd1" />
+
+
 # CRLF & Base64 Injection Scanner v2.0
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
