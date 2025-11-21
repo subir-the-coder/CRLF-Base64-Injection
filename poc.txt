@@ -1,0 +1,12 @@
+Target: Vulnerable parameter enabling CRLF header injection.
+
+Technique: Injecting CRLF to break existing header structure and append malicious response headers.
+
+Example Payload:
+%0D%0ASet-Cookie: hacker=owned
+
+Impact:
+- Cookie Manipulation
+- Cache Poisoning
+- Redirect Manipulation
+- CSP Bypass Risk

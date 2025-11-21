@@ -1,0 +1,3 @@
+%0D%0ASet-Cookie: attacker=1
+%0D%0AContent-Security-Policy: unsafe-inline
+%0D%0Aheader: value
