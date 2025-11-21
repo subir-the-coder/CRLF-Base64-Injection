@@ -1,0 +1,12 @@
+[
+    {
+        "payload": "%0d%0aX-Test: injected",
+        "status": "ERROR: Cannot connect to host crlftest.com:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "%0d%0aSet-Cookie: hacker=owned",
+        "status": "ERROR: Cannot connect to host crlftest.com:443 ssl:default [Name or service not known]",
+        "headers": {}
+    }
+]

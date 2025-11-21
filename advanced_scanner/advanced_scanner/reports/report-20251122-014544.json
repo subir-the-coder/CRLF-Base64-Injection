@@ -1,0 +1,44 @@
+[
+    {
+        "payload": "%0d%0aX-Test: injected",
+        "status": "NO EFFECT",
+        "headers": {
+            "Vary": "Accept-Encoding",
+            "Content-Encoding": "gzip",
+            "reporting-endpoints": "coop_report=\"https://www.facebook.com/browser_reporting/coop/?minimize=0\"",
+            "report-to": "{\"max_age\":2592000,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/browser_reporting\\/coop\\/?minimize=0\"}],\"group\":\"coop_report\",\"include_subdomains\":true}",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "origin-agent-cluster": "?1",
+            "Strict-Transport-Security": "max-age=15552000; preload",
+            "Content-Type": "text/html; charset=\"utf-8\"",
+            "X-FB-Debug": "j66X9y2GE0nEsU5DyxaTJtc/Au+ZQ21FCfDuQLoUSoKKIGzlbsoiE8xtO9Y+plCF7Gk5y/L78i8tkeBWtjnGTQ==",
+            "Date": "Fri, 21 Nov 2025 20:13:54 GMT",
+            "Proxy-Status": "http_request_error; e_fb_vipaddr=\"AcProUghuVpgwXdR_kFpsn_h4Le9SoJLFphLIU16rHmoO8uWFu_Bj_JQ59FxWYNckjlMYuyKVb2yTPQ7ak1o9Q2muSF76AuiGHD-\"; e_clientaddr=\"AcNn-3Iv6XSBRtS_ob3oTcG8L1nVx2ORlLlds6iLTmZjx0z4-RT8ahn1KJboJY5-inNgJYwBTkwaj0fzoRTkb7EYy3XZckyR6PlHcCO9YLUwIjm-Qw\"; e_upip=\"AcMOFvRfh9F0IT4iYTNBsFo36mtpwxZDKltEIS3R7tsAGigqdKtKqU9paoYOpshe9WaFffIvVXMnwX24pTE5uCmN1nDmZk9E7Si5XWesUME\"; e_fb_zone=\"AcMxRygs3ruzK61OQaoynvndch9gRk_fiGgGzD1xe25gdk4xff1DLL2oO2PqTt9-\"; e_fb_twtaskhandle=\"AcMeDOx3aStUuQlDH6CPxOH0wz0heZXGyExico2ZUsDnS5ezvf7Qz_U1oJ-9lu0OWQdOsv7oEP9EtyB8lBwybVZdAFh2GEA8OEaicj9A2O5ET5E\"; e_proxy=\"AcNF6E7zy7JT-KaJY948QgIKVRE_s17jYFxqiItMJezJrns6aZF3KztQGEtXLsb_tjmsjtw9JqnPLQsyfLUl\", http_request_error; e_fb_vipaddr=\"AcOt_apr9bNYrEKKG4aKuvNhvsB5VhdBGfqj9jkD3B5OrDeLH0OB9jeKH67sBmitAtGlXlmIb0-h6oxruSOwFDt0_4vKffoKj9Mp\"; e_clientaddr=\"AcOT8s40HSDLZ8ATQA-SXDukWQ3uYNLGy4WVy3gG_RC8BzNr_s5_Llkwqlc-PWtrdxb1XiExt6TzfvHH-6waE5Z2MgTHTEh7W2XGykUuxfmdb3WHsBKGUQ\"; e_upip=\"AcN_rQL7z--vgRNBehVZcFmREnJzDyaB3xmE52OCsX-spPWNWo5fMhSNId0KHGoukYMRtsUTNuPylX3eksojPXntd3LsdCAEqaqq\"; e_fb_zone=\"AcPdasC4_Vk23tX2YJiJmKJcbn0Ufa6tToKTHKtIugUe-kO1JwRY_qECMYICgg\"; e_fb_twtaskhandle=\"AcM0D9P0313mX-IZLcEkfIHxZnrQbUxWfXA2PRlShtssoeKdTi004mh2rWQHxfNSWAuxADq5hSkELcQ66nFcJ90_T1kR9szt59fO\"; e_proxy=\"AcNIlS5kT7Ly8gL6PS8o5g5dNo5HwFZGrF6NTt_sOM-x9PhulCEQS9NUSbwG4Y-sCtPsZhE7VIsXHIk\"",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=28, rtx=0, c=10, mss=1380, tbw=3479, tp=-1, tpl=-1, uplat=422, ullat=0",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive"
+        }
+    },
+    {
+        "payload": "%0d%0aSet-Cookie: hacker=owned",
+        "status": "NO EFFECT",
+        "headers": {
+            "Vary": "Accept-Encoding",
+            "Content-Encoding": "gzip",
+            "reporting-endpoints": "coop_report=\"https://www.facebook.com/browser_reporting/coop/?minimize=0\"",
+            "report-to": "{\"max_age\":2592000,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/browser_reporting\\/coop\\/?minimize=0\"}],\"group\":\"coop_report\",\"include_subdomains\":true}",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "origin-agent-cluster": "?1",
+            "Strict-Transport-Security": "max-age=15552000; preload",
+            "Content-Type": "text/html; charset=\"utf-8\"",
+            "X-FB-Debug": "3fXaMEDsWm2lrMRCwtAC9CNq56HqsdrS0BYM9irwiTIg/ShQ79FXf8LmZ3F/lmCQNtYXy6k6omNDSuKNJ0wnew==",
+            "Date": "Fri, 21 Nov 2025 20:13:54 GMT",
+            "Proxy-Status": "http_request_error; e_fb_vipaddr=\"AcMpkYS6UAmHO8S-MgJvjyNYvbKqpU_kkuCy8JaOp4W-L9BXF6Ooc57t94GU-wrStKf63jYehmIYV74Bv9YWF4vsRUnviq6k90s\"; e_clientaddr=\"AcN8_u_RRu2EN3nc_1ARaAo06hyLzL7tceghHZqVNxX7UpKssACoqrk3jgjWYThPhLLycnLDSvW5sKC7dpEQhC3RbgxK7vEFvstdI9dLn6e8x3kBLQ\"; e_upip=\"AcMA_r_SysfgUYajQZ7GY75XUTrI76cK_vNR97MYsCA_YQdU4KDfoFy1PExrBfGYwEwfCqea_-KBqP8sraPupZ-ge2hz7-XYYOfvqEF0rnQ\"; e_fb_zone=\"AcOjmrDcMZ2d4wCkMz49eeRbvn3qCB1WwGNJihlRGlnm06uATpsPQpDNZMw2kSXj\"; e_fb_twtaskhandle=\"AcPeVK1uAVIPRTl0AEIl5jgGANrmufNLkKhAXPSdJtA_qcYhHY6ISBG7yX0yH3PR4eUsQ5J9oYr5z36yqOXQYR2HrwFkk9uvvl31wjUjqyPvNFcc\"; e_proxy=\"AcOqh4mXDx5BdH2UldvGJknUKKh1kwRELGaYkuMfMRHXKwPafiaVkSqvU-BerFEaIUzdYuThzWRDuzs_kMg\", http_request_error; e_fb_vipaddr=\"AcNwqalKO_dsN_cWtEa-31Qna9LQWitXwDTGz0VMjY5E6jgAOBw52f-8b6b6HH_EiFT4_zFr\"; e_clientaddr=\"AcO2KUWDUUMIZsFFYdGOuoyYu7TenCY02XPhsvMo7Kf6VZddD7iA1DKqdz-S9-WjLKoVjbbfL1NHLK0\"; e_upip=\"AcPR79BdO7OBZzuVEz3xV1MPgpwdbqmRBfFQJNcQ644Lo2BcOwQyMlWucz8XrpkL27S3KJxNZEJaa5XfWu7t5alA_mEZ-l9ZIn4\"; e_fb_zone=\"AcNWt5P2R7lDi_5ps9YR8wPvzIkhKOsMAnU8jUpPZs9znW05Fzxk8xlKpoYtqg\"; e_fb_twtaskhandle=\"AcMvZ8rU6esyWXpdkcG394x7-E2hzidR_d1RuUqAJe92Jo6N7g-q9vB0nDz2jzCwk8sIGD9-RJ3kzYmFco7S6Viv6nbPPYBYPIa6\"; e_proxy=\"AcOMWUjfCD0VqF6QIcHaXahcjgWAt1h0AivoHfyUq1qLP6lDkxRwwCSCQhJ_1MEPrVWD_PSj8LkWDKM\"",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=28, rtx=0, c=10, mss=1380, tbw=3480, tp=-1, tpl=-1, uplat=334, ullat=0",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive"
+        }
+    }
+]

