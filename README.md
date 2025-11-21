@@ -3,7 +3,7 @@
 **Author:** Subir Sutradhar  
 **Alias:** subir-sutradhar  
 **Project Type:** Research + Exploit PoC  
-**Style:** 🟩 Hacker | 🕶 Cybersecurity | 🔍 Vulnerability Research  
+🕶 Cybersecurity | 🔍 Vulnerability Research  
 
 ---
 
