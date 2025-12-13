@@ -27,10 +27,6 @@ When combined with **Base64 encoding**, some filters fail, allowing payloads to 
 
 ---
 
-## 🔧 Usage
-
----
-
 ## ⚠️ Disclaimer
 
 This tool is for **educational and authorized testing only.**
