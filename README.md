@@ -1,7 +1,6 @@
 # 🔥 CRLF + Base64 Injection Proof of Concept
 
 **Author:** Subir Sutradhar  
-**Alias:** subir-sutradhar  
 **Project Type:** Research + Exploit PoC  
 🕶 Cybersecurity | 🔍 Vulnerability Research  
 
