@@ -13,7 +13,10 @@ This repository demonstrates a vulnerability where an attacker can exploit a **C
 
 When combined with **Base64 encoding**, some filters fail, allowing payloads to bypass sanitization.
 
+![587464582_122172854942387183_4863059669732189671_n](https://github.com/user-attachments/assets/ec16c720-f0b0-4bef-a54f-35c8189afb2b)
+
 ---
+
 
 ## 🚀 Features
 
